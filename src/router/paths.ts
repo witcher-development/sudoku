@@ -1,7 +1,7 @@
 type PathParam = string;
 
 
-type HomePagePath = '/home';
+type HomePagePath = '/';
 type GamePagePath = `/game/${PathParam}`;
 
 export type Paths = HomePagePath | GamePagePath;

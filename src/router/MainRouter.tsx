@@ -3,11 +3,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Paths } from '@router';
 
+import { generateField } from '../features/sudoku/core/generateFiled';
+
+
+const Page = () => {
+	generateField().then(console.log)
+	return <>hi</>;
+};
 
 export const routes = new Map<Paths, {
   element: ReactNode
 }>([
-	['/home', { element: null }],
+	['/', { element: <Page /> }],
 	['/game/:gameId', { element: null }],
 ]);
 
